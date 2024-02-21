@@ -372,21 +372,10 @@
     </footer>   
 </div>
 
-<!--
 
 <script>
-    // kod za sve upite
-document.addEventListener("DOMContentLoaded", function() {
-    var upitBtn = document.querySelector('.upit');
-    upitBtn.addEventListener('click', function() {
-        alert('Šta pitaš?! Skupo ko vrag!');
-    });
-});
-</script>
+    //funkcija za pop-up prozor
 
--->
-
-<script>
     function prikaziSliku(src) {
     // Kreiranje pop-up prozora
     var popupDiv = document.createElement("div");
@@ -402,7 +391,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
     // Dodavanje X za zatvaranje pop-up prozora
     var zatvori = document.createElement("span");
-    zatvori.innerHTML = "&times;";
+    zatvori.innerHTML = "&times;";  // &times je alias za znak X, da web prepozna neovisno o fontu/kodu.
     zatvori.classList.add("zatvori");
     zatvori.onclick = function() {
         document.body.removeChild(popupDiv);
@@ -415,6 +404,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
 </script>
 
+<!--
+
+<script>
+    // kod za sve klase "upit"
+document.addEventListener("DOMContentLoaded", function() {
+    var upitBtn = document.querySelector('.upit');
+    upitBtn.addEventListener('click', function() {
+        alert('Šta pitaš?! Skupo ko vrag!');
+    });
+});
+</script>
+
+-->
 
 </body>
 </html>
